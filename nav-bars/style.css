@@ -38,4 +38,63 @@ nav {
   height: 2px;
   width: 25px;
 }
+
+.nav-links input {
+  position: absolute;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 32px;
+}
+
+.nav-links ul {
+  position: absolute;
+  display: none;
+  list-style: none;
+}
+
+.nav-links ul li {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-links ul li h4 {
+  margin-left: 10px;
+}
+
+.nav-links ul :hover {
+  background-color: blanchedalmond;
+}
+
+.nav-links input:checked ~ ul {
+  display: inline-block;
+  width: 100%;
+  -webkit-animation: slidein 0.5s;
+          animation: slidein 0.5s;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateX(1000%);
+            transform: translateX(1000%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateX(1000%);
+            transform: translateX(1000%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 /*# sourceMappingURL=style.css.map */

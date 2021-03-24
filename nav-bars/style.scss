@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 nav {
   background-color: blue;
   display: flex;
@@ -21,4 +22,46 @@ nav {
   background-color: black;
   height: 2px;
   width: 25px;
+}
+
+.nav-links {
+  input {
+    position: absolute;
+    opacity: 0;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 32px;
+  }
+  ul {
+    position: absolute;
+    display: none;
+    list-style: none;
+    li {
+      padding: 10px;
+      display: flex;
+      h4 {
+        margin-left: 10px;
+      }
+    }
+    :hover {
+      background-color: blanchedalmond;
+    }
+  }
+}
+
+.nav-links input:checked ~ ul {
+  display: inline-block;
+  width: 100%;
+  animation: slidein 0.5s;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(1000%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
